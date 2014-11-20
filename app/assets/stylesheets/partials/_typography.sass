@@ -1,0 +1,39 @@
+// FONTS
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700)
+
+// CONTENT RESET STYLES
+
+div, li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td
+    font-family: "Lato", "Helvetica Neue", Verdana, Arial, sans-serif
+    font-size: 11pt
+    letter-spacing: .03em
+    list-style: none outside none
+    line-height: 1.5em
+    text-decoration: none
+
+// HEADERS
+
+h1, h2, h3, h4, h5, h6
+    font-weight: 500
+    padding-bottom: .5em
+    width: 100%
+
+h1
+    font-size: 30pt
+h2
+    font-size: 20pt
+h3
+    font-size: 18pt
+h4
+    font-size: 16pt
+h5
+    font-size: 14pt  
+
+// SMALLER ELEMENTS
+
+a
+    color: $link_color
+    &:hover
+        color: lighten($link_color, 10%) !important
+        cursor: pointer

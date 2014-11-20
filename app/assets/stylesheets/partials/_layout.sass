@@ -1,0 +1,94 @@
+// LAYOUT RESET STYLES
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, a, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video
+    padding: 0
+    margin: 0
+    border: 0
+    outline: 0
+    vertical-align: baseline
+    list-style: none outside none
+
+*, *:before, *:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+// PAGE ELEMENTS & COMMON CLASSES
+
+html, body
+    min-height: 100%
+    width: 100%
+
+html
+    height: 100%
+
+body
+    background: url(asset_path('straight_slice.png')) fixed white repeat-x
+
+body#home
+    background: url(asset_path('slant.png')) fixed white
+    background-repeat-y: none
+    background-size: cover
+
+.clearfix
+    clear: both
+
+.small-caps
+    float: none
+    font-size: .8em
+    text-transform: uppercase
+
+// MODALS
+
+.modal
+    background: rgba(0,0,0,.3)
+    display: none
+    height: 100%
+    position: fixed
+    width: 100%
+    z-index: 1000
+    .modal-content
+        +roundedCorners()
+        +shadow(0 0 3px 0 $black)
+        +transform(translateY(-50%))
+        background: url(asset_path('bg_pattern.png')) #f7f7f9
+        left: calc(50% - 275px)
+        padding: 25px
+        position: fixed
+        top: calc(50%)
+        width: 550px
+        z-index: 1050
+
+// LAYOUT
+
+#center-wrap
+    max-width: 1000px
+    margin: 0 auto
+    width: 100%
+
+// HEADER
+
+#header
+    height: 175px
+    position: relative
+    #logo
+        +transform(translateX(-50%))
+        position: absolute
+        top: 67px
+        left: 50%
+    .header-left-nav, .header-right-nav
+        +transform(translateY(-50%))
+        position: absolute
+        left: 0
+        top: 50%
+        li
+            float: left
+            &:first-child
+                padding-right: 100px
+            a
+                color: white
+    .header-right-nav
+        left: auto
+        right: 0
+
+

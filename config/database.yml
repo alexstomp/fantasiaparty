@@ -1,0 +1,13 @@
+development:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: fantasia_dev
+  pool:     5
+
+production:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: fantasia
+  pool:     5

@@ -1,0 +1,120 @@
+// GLOBAL VARIABLES AND MIXINS
+
+$black: #202020
+$pink: #F15E7A
+
+// IN USE: 
+
+$highlight_color: $pink
+$text_color: lighten($black, 20%)
+$link_color: $pink
+
+// GLOBAL MIXINS
+
+@mixin border-box
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+
+@mixin noOuterDimensions
+    margin: 0
+    border: 0 none
+    outline: 0 none
+    padding: 0
+
+@mixin resetList($display: block)
+    @include noOuterDimensions
+    display: $display
+    list-style: none
+
+@mixin roundedCorners($radius: 5px)
+    border-radius: $radius
+    -moz-border-radius: $radius
+    -webkit-border-radius: $radius
+    background-clip: padding-box
+    -moz-background-clip: padding-box
+    -webkit-background-clip: padding-box
+
+@mixin text-shadow($settings: 1px 1px 0px rgba(255, 255, 255, 1))
+    text-shadow: $settings
+    -moz-text-shadow: $settings
+    -webkit-text-shadow: $settings
+
+@mixin shadow($settings)
+    box-shadow: $settings
+    -moz-box-shadow: $settings
+    -webkit-box-shadow: $settings
+
+@mixin transform($transform)
+    transform: $transform
+    -moz-transform: $transform
+    -webkit-transform: $transform
+
+@mixin backgroundGradient($fromColor, $toColor)
+    background-color: $toColor
+    background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor))
+    background-image: -webkit-linear-gradient(top, $fromColor, $toColor)
+    background-image: -moz-linear-gradient(top, $fromColor, $toColor)
+    background-image: -ms-linear-gradient(top, $fromColor, $toColor)
+    background-image: -o-linear-gradient(top, $fromColor, $toColor)
+    background-image: linear-gradient(top, $fromColor, $toColor)
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+@mixin opacity($value)
+    opacity: $value
+    filter: unquote("alpha(opacity=#{($value * 100)})")
+
+@mixin transition($property: all, $time: .5s)
+    // transition times
+    transition-duration: $time
+    -o-transition-duration: $time
+    -ms-transition-duration: $time
+    -moz-transition-duration: $time
+    -webkit-transition-duration: $time
+    // transition properties
+    transition-property: $property
+    -o-transition-property: $property
+    -ms-transition-property: $property
+    -moz-transition-property: $property
+    -webkit-transition-property: $property
+    // transition function
+    transition-timing-function: ease-in-out
+    -o-transition-timing-function: ease-in-out
+    -ms-transition-timing-function: ease-in-out
+    -moz-transition-timing-function: ease-in-out
+    -webkit-transition-timing-function: ease-in-out
+
+@mixin backgroundSize($tuplePercent)
+    background-size: $tuplePercent
+    -moz-background-size: $tuplePercent
+    -webkit-background-size: $tuplePercent
+    
+@mixin animation($animation)
+    -webkit-animation: $animation
+    -moz-animation: $animation
+    -ms-animation: $animation
+    -o-animation: $animation
+    animation: $animation
+
+@mixin gradientStriped($color: rgba(255,255,255,.15), $angle: 135deg)
+    background-image: -webkit-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent)
+    background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent)
+    background-image: -moz-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent)
+    background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent)
+
+@-webkit-keyframes progress-bar-stripes
+    from
+        background-position: 0 0
+    to
+        background-position: 40px 0
+
+@-moz-keyframes progress-bar-stripes
+    from
+        background-position: 0 0
+    to
+        background-position: 40px 0
+ 
+@keyframes progress-bar-stripes
+    from
+        background-position: 0 0
+    to
+        background-position: 40px 0
