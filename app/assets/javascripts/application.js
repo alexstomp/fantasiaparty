@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
@@ -22,6 +23,14 @@ $(document).ready(function() {
             $('#banner-overlay').stop(true,true).fadeIn();
         }, function() {
             $('#banner-overlay').stop(true,true).fadeOut();
+        }
+    );
+
+    $('.galleries .gallery').hover(
+        function() {
+            $(this).find('.image-overlay').stop(true, true).slideDown(200);
+        }, function() {
+            $(this).find('.image-overlay').stop(true, true).slideUp(200);
         }
     );
 

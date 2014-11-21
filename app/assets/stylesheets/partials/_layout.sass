@@ -25,11 +25,15 @@ html
 body
     background: url(asset_path('straight_slice.png')) white repeat-x
     padding-bottom: 250px
+    #header
+        margin-bottom: 50px
 
 body#home
     background: url(asset_path('slant.png')) white
     background-repeat-y: none
     background-size: cover
+    #header
+        margin-bottom: 0
 
 .clearfix
     clear: both
@@ -70,6 +74,7 @@ body#home
 // HEADER
 
 #header
+    background: url(asset_path('bg_spotlight.png')) transparent
     height: 175px
     position: relative
     #logo
@@ -88,15 +93,26 @@ body#home
                 padding-right: 100px
             a
                 color: white
+            &.active
+                a
+                    color: lighten($link_color, 10%)
     .header-right-nav
         left: auto
         right: 0
 
 
+// PAGE WRAP (not used on home page or galleries page)
+
+#page-wrap
+    float: left
+    padding-right: 25px
+    max-width: 700
+    width: 70%
+
 // SIDEBAR
 
 #sidebar-wrap
-    border-left: 3px solid $highlight_color
+    border-left: 4px solid $highlight_color
     float: right
     padding-left: 25px
     max-width: 300px

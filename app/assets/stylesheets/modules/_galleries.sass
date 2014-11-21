@@ -1,0 +1,35 @@
+// GALLERIES LIST
+
+.galleries
+    float: left
+    height: auto
+    width: 100%
+    .gallery
+        float: left
+        margin-right: 5%
+        margin-bottom: 50px
+        max-width: 300px
+        position: relative
+        width: 30%
+        &:nth-child(3n+3)
+            margin-right: 0
+        a
+            width: 100%
+            img
+                vertical-align: top
+                width: 100%
+        .image-overlay
+            background: url(asset_path('noise.png')) $black
+            bottom: 0
+            display: none
+            padding: 15px
+            position: absolute
+            width: 100%
+            p
+                color: white
+                float: left
+            i
+                +transform(translateY(-50%))
+                position: absolute
+                right: 15px
+                top: 50%

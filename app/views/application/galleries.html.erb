@@ -1,0 +1,34 @@
+<h1 class="page-header"><strong>GALLERIES</strong>cliquez sur une image pour visioner l'album</h1>
+
+<ul class="galleries">
+    <% @albums.each do |alb| %>
+        <li class="gallery">
+            <a href="<%= album_path(alb) %>"><img src="<%= asset_path('clara.JPG') %>"/></a>
+            <a class="image-overlay">
+                <p><%= l(alb.date, :format => "%d %B %Y") %></p>
+                <i class="icon-chevron-right"></i>
+            </a>
+        </li>
+        <li class="gallery">
+            <a href="<%= album_path(alb) %>"><img src="<%= asset_path('clara.JPG') %>"/></a>
+            <a class="image-overlay">
+                <p><%= l(alb.date, :format => "%d %B %Y") %></p>
+                <i class="icon-chevron-right"></i>
+            </a>
+        </li>
+        <li class="gallery">
+            <a href="<%= album_path(alb) %>"><img src="<%= asset_path('clara.JPG') %>"/></a>
+            <a class="image-overlay">
+                <p><%= l(alb.date, :format => "%d %B %Y") %></p>
+                <i class="icon-chevron-right"></i>
+            </a>
+        </li>
+        <li class="gallery">
+            <a href="<%= album_path(alb) %>"><img src="<%= asset_path('clara.JPG') %>"/></a>
+            <a class="image-overlay">
+                <p><%= l(alb.date, :format => "%d %B %Y") %></p>
+                <i class="icon-chevron-right"></i>
+            </a>
+        </li>
+    <% end %>
+</ul>

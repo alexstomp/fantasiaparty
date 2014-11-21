@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
   def home
   end
 
-  def gallerie
+  def galleries
+    @albums = Album.where(:archived => false)
   end
 
   def options
