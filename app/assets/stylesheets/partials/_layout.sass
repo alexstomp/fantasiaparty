@@ -23,10 +23,11 @@ html
     height: 100%
 
 body
-    background: url(asset_path('straight_slice.png')) fixed white repeat-x
+    background: url(asset_path('straight_slice.png')) white repeat-x
+    padding-bottom: 250px
 
 body#home
-    background: url(asset_path('slant.png')) fixed white
+    background: url(asset_path('slant.png')) white
     background-repeat-y: none
     background-size: cover
 
@@ -90,5 +91,41 @@ body#home
     .header-right-nav
         left: auto
         right: 0
+
+
+// SIDEBAR
+
+#sidebar-wrap
+    border-left: 3px solid $highlight_color
+    float: right
+    padding-left: 25px
+    max-width: 300px
+    width: 30%
+    .contact-info
+        padding: 5px 0
+        li
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+            strong
+                color: lighten($black, 15%)
+                font-weight: 700
+                padding-right: 7px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

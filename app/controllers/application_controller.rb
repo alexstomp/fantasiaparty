@@ -7,4 +7,13 @@ class ApplicationController < ActionController::Base
   def home
   end
 
+  def gallerie
+  end
+
+  def options
+  end
+
+  def info
+  end
+
 end

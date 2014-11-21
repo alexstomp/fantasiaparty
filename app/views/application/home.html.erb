@@ -1,1 +1,16 @@
-<p>Hahaha</p>
+<div id="banner-wrap">
+    <img src="<%= asset_path('slide.png') %>"></img>
+    <a id="banner-overlay" href="<%= gallerie_path %>">
+        <span class="corner-text">
+            <i class="icon-camera"></i>
+            Gallerie
+        </span>
+    </a>
+</div>
+
+<div id="intro-wrap">
+    <h2 class="section-header">Introduction</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at arcu ut ligula condimentum porttitor. Phasellus at turpis nisi. Etiam placerat vitae dui quis interdum. Quisque quis lectus ut elit rhoncus commodo. Aliquam ornare lobortis nibh, quis sodales tellus dignissim in. Donec quis libero ac diam dapibus bibendum. Donec sed.</p>
+</div>
+
+<%= render "layouts/sidebar" %>

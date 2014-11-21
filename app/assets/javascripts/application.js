@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+
+    $('#banner-wrap').hover(
+        function() {
+            $('#banner-overlay').stop(true,true).fadeIn();
+        }, function() {
+            $('#banner-overlay').stop(true,true).fadeOut();
+        }
+    );
+
+});
