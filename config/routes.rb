@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get "galleries" => "application#galleries", :as => :galleries
   get "options" => "application#options", :as => :options
-  get "deborah" => "application#info", :as => :info
+  get "contact" => "application#contact", :as => :contact
 
   get "album/:id" => "albums#show", :as => :album
 

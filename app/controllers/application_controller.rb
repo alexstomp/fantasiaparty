@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   def options
   end
 
-  def info
+  def contact
   end
 
 end
