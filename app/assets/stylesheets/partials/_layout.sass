@@ -15,22 +15,19 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 
 // PAGE ELEMENTS & COMMON CLASSES
 
-html, body
+html
     min-height: 100%
     width: 100%
-
-html
-    height: 100%
 
 body
     background: url(asset_path('straight_slice.png')) white repeat-x
     padding-bottom: 250px
+    height: 100%
     #header
         margin-bottom: 50px
 
 body#home
-    background: url(asset_path('slant.png')) white
-    background-repeat-y: none
+    background: url(asset_path('slant.png')) white no-repeat
     background-size: cover
     #header
         margin-bottom: 0
@@ -66,8 +63,8 @@ body#home
 
 // LAYOUT
 
-#center-wrap
-    max-width: 1000px
+body
+    max-width: 1050px
     margin: 0 auto
     width: 100%
 
@@ -76,6 +73,7 @@ body#home
 #header
     background: url(asset_path('bg_spotlight.png')) transparent
     height: 175px
+    margin: 0 25px
     position: relative
     #logo
         +transform(translateX(-50%))
@@ -101,12 +99,19 @@ body#home
         right: 0
 
 
-// PAGE WRAP (not used on home page or galleries page)
+// PAGE WRAP
 
 #page-wrap
     float: left
+    padding: 0 25px
+    width: 100%
+
+// CONTENT WRAP
+
+#content-wrap
+    float: left
+    max-width: 700px
     padding-right: 25px
-    max-width: 700
     width: 70%
 
 // SIDEBAR
@@ -136,7 +141,15 @@ body#home
                 font-weight: 200
                 font-style: normal
 
+// FOOTER
 
+#footer-wrap
+    color: grey
+    float: left
+    font-weight: 200
+    padding: 25px
+    text-align: center
+    width: 100%
 
 
 

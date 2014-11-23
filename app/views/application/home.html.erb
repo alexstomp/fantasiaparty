@@ -3,18 +3,20 @@
     <a id="banner-overlay" href="<%= galleries_path %>">
         <span class="corner-text">
             <i class="icon-camera"></i>
-            <p>Gallerie</p>
+            <p>Albums</p>
         </span>
     </a>
 </div>
 
-<div id="intro-wrap">
-    <h2 class="section-header">bienvenue</h2>
+<div id="page-wrap">
+    <div id="intro-wrap">
+        <h2 class="section-header">bienvenue</h2>
 
-    <p>Avec nos vies à cent à l’heure, pas toujours le temps de s’investir comme on le voudrait pour les fêtes de nos enfants !</p>
-    <p>Je vous propose <a href="<%= options_path %>">3 formules</a> qui peuvent être combinables selon vos envies !</p>
-    <p>Les prix affichés comprennent tout le matériel nécessaire au bon déroulement de l’activité, la prestation et le coût de mon déplacement si vous habiter en région bruxelloise et périphérie.</p>
-    <p>Je me tiens à disposition pour m’adapter au mieux selon vos envies !</p>
+        <p>Avec nos vies à cent à l’heure, pas toujours le temps de s’investir comme on le voudrait pour les fêtes de nos enfants !</p><br>
+        <p>Je vous propose <a href="<%= options_path %>">3 formules</a> qui peuvent être combinables selon vos envies !</p><br>
+        <p>Les prix affichés comprennent tout le matériel nécessaire au bon déroulement de l’activité, la prestation et le coût de mon déplacement si vous habiter en région bruxelloise et périphérie.</p><br>
+        <p>Je me tiens à disposition pour m’adapter au mieux selon vos envies !</p>
+    </div>
+
+    <%= render "layouts/sidebar" %>
 </div>
-
-<%= render "layouts/sidebar" %>

@@ -3,12 +3,10 @@
     <%= render 'layouts/head' %>
 <body>
 
-<div id="center-wrap">
     <%= render 'layouts/header' %>
-    <div id="content-wrap">
+    <div id="page-wrap">
         <%= yield %>
     </div>
-</div>
-
+    <%= render 'layouts/footer' %>
 </body>
 </html>
