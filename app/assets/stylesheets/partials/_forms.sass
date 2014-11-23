@@ -1,0 +1,63 @@
+// FORM
+
+form
+    clear: left
+    position: relative
+    width: 100%
+    .form-item
+        clear: left
+        float: left
+        padding-bottom: 15px
+        width: 50%
+        label, input, textarea
+            width: 100%
+        label
+            font-size: .8em
+            font-weight: 400
+            padding-bottom: 5px
+            text-transform: uppercase
+        input, textarea
+            +roundedCorners(2px)
+            border: 1px solid #d7d7d9
+            font-size: 1.2em
+            padding: 7px
+            resize: none
+            outline: none
+        textarea
+            min-height: 100px
+        input[type="submit"]
+            border: 0
+            width: 150px
+    .form-side
+        position: absolute
+        right: 0
+        top: 20px
+        padding-left: 25px
+        margin-left: 3%
+        border-left: 4px solid $highlight-color
+        width: 47%
+
+
+// BUTTON
+
+button, a.button, input[type="submit"]
+    +roundedCorners(4px)
+    +shadow(inset 0px 1px 1px rgba(255, 255, 255, .1))
+    background-color: #e7e7e9
+    border: 0
+    color: #333
+    cursor: pointer
+    font-weight: 400
+    font-size: 15px
+    padding: 9px 20px 7px 20px
+    text-transform: uppercase
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8)
+    &:hover
+        +shadow(inset 0px 1px 4px 1px rgba(0, 0, 0, .05))
+    &.accent
+        +backgroundGradient(lighten($highlight-color, 0%), darken($highlight-color, 10%))
+        +text-shadow(1px 1px 1px darken($highlight_color, 10%))
+        color: white
+        &:hover
+            +shadow(inset 0px 1px 10px 1px rgba(0, 0, 0, .2))
+            color: white !important

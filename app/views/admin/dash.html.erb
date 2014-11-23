@@ -1,0 +1,30 @@
+<h1 class="page-header"><strong>ZONE ADMINISTRATIVE</strong><a href="<%= update_path %>" class="button accent">CHANGEMENT D'ORDRE</a></h1>
+
+<ul class="admin-galleries">
+    <% @albums.each do |alb| %>
+        <li class="gallery">
+            <a href="<%= edit_album_path(alb) %>"><img src="<%= asset_path('clara.JPG') %>"/></a>
+            <a class="image-overlay">
+                <p><%= alb.nom %> (<%= alb.age %>)</p>
+                <i class="icon-chevron-right"></i>
+            </a>
+        </li>
+    <% end %>
+    <li class="new-gallery"><a href="<%= new_album_path %>">+</a></li>
+</ul>
+
+<% if @archive.size != 0 %>
+    <h1 class="page-header"><strong>ARCHIVE</strong></h1>
+
+    <ul class="admin-galleries archives">
+        <% @archive.each do |alb| %>
+            <li class="gallery">
+                <a href="<%= edit_album_path(alb) %>"><img src="<%= asset_path('clara.JPG') %>"/></a>
+                <a class="image-overlay">
+                    <p><%= alb.nom %> (<%= alb.age %>)</p>
+                    <i class="icon-chevron-right"></i>
+                </a>
+            </li>
+        <% end %>
+    </ul>
+<% end %>

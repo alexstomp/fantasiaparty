@@ -1,9 +1,11 @@
 // GALLERIES LIST
 
-.galleries
+.galleries, .admin-galleries
     float: left
     height: auto
     width: 100%
+    li:nth-child(3n+3)
+        margin-right: 0
     .gallery
         float: left
         margin-right: 5%
@@ -11,8 +13,6 @@
         max-width: 300px
         position: relative
         width: 30%
-        &:nth-child(3n+3)
-            margin-right: 0
         a
             width: 100%
             img
@@ -34,3 +34,46 @@
                 position: absolute
                 right: 15px
                 top: 50%
+
+// ADMIN SIDE
+
+.admin-galleries
+    .gallery
+        .image-overlay
+            display: none
+        &:hover
+            .image-overlay
+                display: block
+    .new-gallery
+        float: left
+        margin-right: 5%
+        margin-bottom: 50px
+        max-width: 300px
+        position: relative
+        width: 30%
+        a
+            +shadow(inset 0px 0px 50px 2px lighten(#d7d7d9, 4%))
+            float: left
+            padding: 50px 0
+            font-size: 100px
+            line-height: 100px
+            text-align: center
+            width: 100%
+            &:hover
+                +shadow(inset 0px 0px 50px 2px lighten(#d7d7d9, 0%))
+                color: $pink !important
+    &.archives
+        li
+            margin-right: 2.5%
+            max-width: 150px
+            opacity: .75
+            width: 15%
+            &:nth-child(3n+3)
+                margin-right: 2.5%
+            &:nth-child(6n+6)
+                margin-right: 0
+            .image-overlay
+                display: none
+            &:hover
+                .image-overlay
+                    display: block
