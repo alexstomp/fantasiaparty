@@ -1,9 +1,9 @@
 <div id="header">
     <ul class="header-left-nav">
-        <li <% if current_page?(:controller => 'application', :action => 'home') %>class="active"<% end %>>
+        <li <% if !devise_controller? && current_page?(:controller => 'application', :action => 'home') %>class="active"<% end %>>
             <a href="<%= root_path %>">ACCUEIL</a>
         </li>
-        <li <% if current_page?(:controller => 'application', :action => 'galleries') %>class="active"<% end %>>
+        <li <% if !devise_controller? && current_page?(:controller => 'application', :action => 'galleries') %>class="active"<% end %>>
             <a href="<%= galleries_path %>">ALBUMS</a>
         </li>
     </ul>
@@ -11,10 +11,10 @@
         <img src="<%= asset_path('logo.png') %>"/>
     </a>
     <ul class="header-right-nav">
-        <li <% if current_page?(:controller => 'application', :action => 'options') %>class="active"<% end %>>
+        <li <% if !devise_controller? && current_page?(:controller => 'application', :action => 'options') %>class="active"<% end %>>
             <a href="<%= options_path %>">FORMULES</a>
         </li>
-        <li <% if current_page?(:controller => 'application', :action => 'contact') %>class="active"<% end %>>
+        <li <% if !devise_controller? && current_page?(:controller => 'application', :action => 'contact') %>class="active"<% end %>>
             <a href="<%= contact_path %>">CONTACT</a>
         </li>
     </ul>

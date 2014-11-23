@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   root "application#home"
 
   get "galleries" => "application#galleries", :as => :galleries

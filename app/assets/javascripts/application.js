@@ -34,4 +34,10 @@ $(document).ready(function() {
         }
     );
 
+    $('body').bind('keyup', function(event) {
+        if (event.keyCode == 27) { 
+            window.location = "/admin"; 
+        }
+    });
+
 });
