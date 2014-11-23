@@ -4,7 +4,7 @@
             <a href="<%= root_path %>">ACCUEIL</a>
         </li>
         <li <% if current_page?(:controller => 'application', :action => 'galleries') %>class="active"<% end %>>
-            <a href="<%= galleries_path %>">GALLERIES</a>
+            <a href="<%= galleries_path %>">ALBUMS</a>
         </li>
     </ul>
     <a href="<%= root_path %>" id="logo">
@@ -12,7 +12,7 @@
     </a>
     <ul class="header-right-nav">
         <li <% if current_page?(:controller => 'application', :action => 'options') %>class="active"<% end %>>
-            <a href="<%= options_path %>">OPTIONS</a>
+            <a href="<%= options_path %>">FORMULES</a>
         </li>
         <li <% if current_page?(:controller => 'application', :action => 'contact') %>class="active"<% end %>>
             <a href="<%= contact_path %>">CONTACT</a>

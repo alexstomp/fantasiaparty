@@ -80,7 +80,7 @@ body#home
     #logo
         +transform(translateX(-50%))
         position: absolute
-        top: 67px
+        top: 50px
         left: 50%
     .header-left-nav, .header-right-nav
         +transform(translateY(-50%))
@@ -117,8 +117,13 @@ body#home
     padding-left: 25px
     max-width: 300px
     width: 30%
+    img
+        margin: 0 auto
+        width: 60%
     .contact-info
-        padding: 5px 0
+        float: left
+        padding: 20px 0 5px
+        width: 100%
         li
             margin-bottom: 10px
             &:last-child
@@ -127,6 +132,9 @@ body#home
                 color: lighten($black, 15%)
                 font-weight: 700
                 padding-right: 7px
+            em
+                font-weight: 200
+                font-style: normal
 
 
 
